@@ -19,7 +19,7 @@
           @click="game.selectedTraining = t.id"
         >
           <span class="training-name">{{ t.name }}</span>
-          <span class="training-desc">{{ t.desc }}</span>
+          <span class="training-option-desc">{{ t.desc }}</span>
         </button>
       </div>
 
@@ -112,7 +112,7 @@ const trainings = MORNING_TRAININGS;
   font-weight: bold;
   font-size: 0.95rem;
 }
-.training-desc {
+.training-option-desc {
   font-size: 0.75rem;
   color: var(--text-dim);
   margin-top: 2px;

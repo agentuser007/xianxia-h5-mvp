@@ -50,7 +50,7 @@ export const useInventoryStore = defineStore('inventory', () => {
   function getItemsByType(type) {
     return Object.entries(items.value)
       .filter(([id, count]) => count > 0 && ITEMS[id] && ITEMS[id].type === type)
-      .map(([id, count]) => ({ ...ITEMS[id], count }))
+      .map(([id, count]) => ({ ...ITEMS[id], itemId: id, count }))
   }
 
   // 获取所有非零物品
