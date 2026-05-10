@@ -9,6 +9,10 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    # 就是加了下面这两行环境声明
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
